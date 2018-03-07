@@ -1,0 +1,19 @@
+{
+  "name": "cisconpi",
+  "version": "1.0.0",
+  "description": "This is a Cisco Dashboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cisconpi"
+  ],
+  "author": "celestica",
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^3.6.6",
+    "js-yaml": "^3.11.0",
+    "swagger-tools": "^0.10.3"
+  }
+}

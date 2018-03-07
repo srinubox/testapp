@@ -1,0 +1,158 @@
+swagger: '2.0'
+info:
+  title: Cisco NPI
+  version: '1.0'
+host: clsapi.azure-api.net
+basePath: /cisconpi
+schemes:
+  - https
+securityDefinitions:
+  apiKeyHeader:
+    type: apiKey
+    name: Ocp-Apim-Subscription-Key
+    in: header
+  apiKeyQuery:
+    type: apiKey
+    name: subscription-key
+    in: query
+security:
+  - apiKeyHeader: []
+  - apiKeyQuery: []
+paths:
+  /v1/wip/:
+    post:
+      description: |-
+        WIP
+
+        Example
+
+        { "BU": ["CABU"] }
+      operationId: /v1/wip/
+      responses: {
+        "200": {
+            "description": ""
+          }
+      }
+  /v1/yield/:
+    post:
+      description: |-
+        Yield
+
+        Example
+
+        { "BU": ["CABU"] }
+      operationId: /v1/yield/
+      responses: {
+        "200": {
+            "description": ""
+          }
+      }
+  /v1/wipdetails/:
+    post:
+      description: "WIP Details\n\nExample\n\n{   \t\"PROJECT_NAME\" : \"Project 1\",\n\t\"BUILD_NUMBER\" : \"P2B\",\n\t\"ASSEMBLY\" : \"800-47897-01\",\n\t\"REVISION\" : \"01\"\n}"
+      operationId: /v1/wipdetails/
+      responses: {
+        "200": {
+            "description": ""
+          }
+      }
+  /v1/actionplan/:
+    post:
+      description: |-
+        Action Plan
+
+        Example
+
+        { 
+        "BU": "CABU",
+        "ASSEMBLY": "800-103248-01",
+        "REVISION": "12" 
+        }
+      operationId: /v1/actionplan/
+      responses: {
+        "200": {
+            "description": ""
+          }
+      }
+  /v1/shipsummary/:
+    post:
+      description: |-
+        Ship Summary
+
+        Example
+
+        { "BU": ["CABU"] }
+      operationId: /v1/shipsummary/
+      responses: {
+        "200": {
+            "description": ""
+          }
+      }
+  /v1/shipoverview/:
+    post:
+      description: |-
+        Ship Overview
+
+        Example
+
+        {
+            "PROJECT_NAME": "Remote Node MB",
+            "BUILD_NUMBER": "P1D",
+            "ASSEMBLY": "800-103248-01",
+            "REVISION": "12"
+        }
+      operationId: /v1/shipoverview/
+      responses: {
+        "200": {
+            "description": ""
+          }
+      }
+  /v1/shiptracking/:
+    post:
+      description: |-
+        Ship Tracking
+
+        Example
+
+        { 
+        "TN": "FEDEX EXPRESS:734183706059"
+        }
+      operationId: /v1/shiptracking/
+      responses: {
+        "200": {
+            "description": ""
+          }
+      }
+  /v1/balanceremaining/:
+    post:
+      description: |-
+        Balance Remaining
+
+        Example
+
+        {
+            "PROJECT_NAME": "Sup 250G",
+            "BUILD_NUMBER": "Pre-Pilot",
+            "ASSEMBLY": "800-103248-01",
+            "REVISION": "12"
+        }
+      operationId: /v1/balanceremaining/
+      responses: {
+        "200": {
+            "description": ""
+          }
+      }
+  /v1/protowip/:
+    post:
+      description: |-
+        WIP
+
+        Example
+
+        { "BU": ["CABU"] }
+      operationId: Copy of /v1/wip/
+      responses: {
+        "200": {
+            "description": ""
+          }
+      }
